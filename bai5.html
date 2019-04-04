@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 =['Polaris','Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe ', 'Regulus'];
+    let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    do {
+        let starInput = prompt('Star name?');
+        for (let i = 0; i < arr1.length; i++) {
+            let check = arr1.indexOf(starInput);
+            if (check === -1) {
+                alert('Không có thông tin');
+                break;
+            } else {
+                alert(arr2[check]);
+                break;
+            }
+        }
+    } while (askMore())
+
+    function askMore() {
+     let kq = confirm('Do u want to ask more?');
+     return kq;
+    }
+</script>
+</body>
+</html>
